@@ -1,6 +1,6 @@
 {
   "name": "chatium",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Unofficial Google Chat Browser",
   "main": "main.js",
   "scripts": {
@@ -39,6 +39,7 @@
   },
   "dependencies": {
     "canvas": "^3.1.0",
+    "electron-context-menu": "^4.0.4",
     "electron-squirrel-startup": "^1.0.1"
   }
 }

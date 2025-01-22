@@ -1,5 +1,12 @@
-const { app, BrowserWindow, Tray, ipcMain, nativeImage } = require('electron')
+const { app, BrowserWindow, Tray, ipcMain, nativeImage, shell } = require('electron')
 const {createCanvas, loadImage} = require("canvas");
+
+(async () => {
+	const contextMenu = await import('electron-context-menu')
+	contextMenu.default({
+	  showSaveImageAs: true
+	})
+  })()
 
 function createTrayIcon(count = null) {
 	const iconPath = app.getAppPath() + "/images/icon.png";
@@ -74,6 +81,18 @@ app.whenReady().then(() => {
 	win.minimize();
 
 	win.loadURL('https://chat.google.com');
+
+	win.webContents.setWindowOpenHandler(({ url }) => {
+		// open url in a browser and prevent default
+		if (url.startsWith("https://www.google.com/url")) {
+			const actualURL = new URL(url);
+			const params = new URLSearchParams(actualURL.search);
+			shell.openExternal(params.get("url"));
+			return { action: 'deny' };
+		}
+
+		return { action: 'allow' };
+	});
 
 	const trayIcon = new Tray(createTrayIcon());
 	trayIcon.setToolTip("Chatium");
