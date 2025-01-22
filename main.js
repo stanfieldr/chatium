@@ -47,7 +47,10 @@ app.whenReady().then(() => {
 		let image = createTrayIcon(count);
 
 		if (count > 0) {
+			win.flashFrame(true);
 			image = await image;
+		} else {
+			win.flashFrame(false);
 		}
 
 		trayIcon.setImage(image);

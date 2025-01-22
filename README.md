@@ -7,11 +7,13 @@ point we stop using Google Chat, I will no longer maintain this project. I'll ma
 
 - Linux
 
-## Features
+### Normal Screenshot
 
-- Tray Icon
-- Tray Icon changes to indicate unread messages
-- Native Notifications
+![Screenshot Read](images/screenshot_read.png)
+
+### Unread Messages Screenshot
+
+![Screenshot Unread](images/screenshot_unread.png)
 
 ## Contributions
 
