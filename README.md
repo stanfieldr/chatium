@@ -7,6 +7,15 @@ point we stop using Google Chat, I will no longer maintain this project. I'll ma
 
 - Linux
 
+## Install
+
+Download the flatpak from the releases page under assets: https://github.com/stanfieldr/chatium/releases/latest
+```bash
+flatpak install com.github.chatium_stable_x86_64.flatpak
+```
+
+I have only tested the flatpak, YMMV for deb/rpm
+
 ### Normal Screenshot
 
 ![Screenshot Read](images/screenshot_read.png)

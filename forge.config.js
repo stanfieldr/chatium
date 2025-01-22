@@ -2,6 +2,19 @@ const { FusesPlugin } = require('@electron-forge/plugin-fuses');
 const { FuseV1Options, FuseVersion } = require('@electron/fuses');
 
 module.exports = {
+  publishers: [
+    {
+      name: "@electron-forge/publisher-github",
+      platforms: ["linux"],
+      config: {
+        repository: {
+          owner: "stanfieldr",
+          name: "chatium"
+        },
+        prerelease: true
+      }
+    }
+  ],
   packagerConfig: {
     asar: true,
     extraResource: [
