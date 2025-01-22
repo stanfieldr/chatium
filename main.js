@@ -71,6 +71,7 @@ app.whenReady().then(() => {
 	});
 
 	win.maximize();
+	win.minimize();
 
 	win.loadURL('https://chat.google.com');
 
@@ -79,7 +80,7 @@ app.whenReady().then(() => {
 
 	function toggleVisible() {
 		if (win.isFocused()) {
-			win.hide();
+			win.minimize();
 		} else {
 			win.show();
 			win.focus();
