@@ -10,16 +10,19 @@
 			}
 
 
-			const countDiv = roasterFrame.contentDocument.body.querySelector("[aria-label*='unread']");
-			if (countDiv === null) {
+			const countDivs = roasterFrame.contentDocument.body.querySelectorAll("[aria-label*='unread']");
+			if (countDivs.length === 0) {
 				ipcRenderer.invoke('notification-count', 0);
 				return;
 			}
 
-			const unread = countDiv.innerText;
+			let sum = 0;
+			for (let i = countDivs.length - 1; i >= 0; i--) {
+				sum += Number(countDivs[i].innerText);
+			}
 
 			// TODO: spaces
-			ipcRenderer.invoke('notification-count', unread);
+			ipcRenderer.invoke('notification-count', sum);
 		}, 1000);
 	});
 })();

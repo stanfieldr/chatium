@@ -1,7 +1,7 @@
 # Chatium
 
 This web browser opens Google Chat in electron and is unofficial. This project is not associated with Google. I maintain it for my use at work, and if at any
-point we stop using Google Chat, I will no longer maintain this project. I'll will make an effort to resolve any issues, but no garuntees.
+point we stop using Google Chat, I will no longer maintain this project. I'll make an effort to resolve any issues, but no garuntees.
 
 ## Operating Systems
 
@@ -23,7 +23,7 @@ Tip Monero: 8Ag9ar38hzsSbpa5YU7Z3phwTiPyEZvB5drMBwqbq3mYBDbsfaSnK7iYhcBDj6LJHbcM
 
 - The app closes when you click the X button (click the tray icon as work around)
 - No settings like autostart (workaround use KDE or Gnome settings to start)
-- When you first start the app you need to login, a bit unintuitive
+- When you first start the app you need to login, a bit unintuitive (only the very first time)
 
 ## Building from source
 
